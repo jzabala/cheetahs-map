@@ -1,4 +1,4 @@
-class Singup extends React.Componenet{
+class Signup extends React.Componenet{
 constructor()
 {
   super();
