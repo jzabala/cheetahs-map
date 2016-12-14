@@ -4,7 +4,9 @@ import App from './components/App';
 import Signup from './components/Signup';
 import './index.css';
 
-ReactDOM.render(
-  <Signup />,
-  document.getElementById('signup')
-);
+const express = require('express');
+const app = express();
+
+
+ ReactDOM.render( <Signup />,
+                   document.getElementById('signup'));
