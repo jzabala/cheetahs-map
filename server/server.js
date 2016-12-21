@@ -1,8 +1,28 @@
 var express = require('express');
+var path = require('path');
+var React = require('react');
+//var view  = require(path.join(__dirname,'../web/src'));
+//var React = require('react-dom/server');
 
 
-const server = new express();
+var server = new express();
 
- server.get('/', (req, res) => {
-    res.render('./../web/public/index.ejs',{});
- }).listen(7777);;
+server.set('view engine', 'html');
+server.use(express.static(path.join(__dirname, '../web/src')));
+
+server.set('view engine', 'html');
+server.use(express.static(path.join(__dirname, '../web/src')));
+
+server.post('/user:id',(res,req)=>{
+
+});
+server.post('/user',(res,req)=>{
+
+});
+server.delete('/user',(res,req)=>{
+
+});
+
+var port = server.listen(3000,function(){
+  console.log("listen in port"+' '+ port.address().port);
+});
